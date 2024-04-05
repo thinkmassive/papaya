@@ -34,7 +34,9 @@
 <div class="container">
     {% block header %}
     {% set base_url = get_url(path="", lang=lang) %}
+    {% set header_logo = resize_image(path="/static/logo.jpg", width=100, height=100, op="scale") %}
     <header>
+        <img src="{{ header_logo.url }}" style="border-radius: 50%" /></center>
         <h1 class="site-header">
             <a href="{{ base_url }}">{{ config.title }}</a>
         </h1>
